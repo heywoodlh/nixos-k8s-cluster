@@ -6,3 +6,6 @@ resources:
   - ./role_binding.yaml
   - ./role.yaml
   - ./service_account.yaml
+  - ./secretgenerator.mittwald.de_basicauths_crd.yaml
+  - ./secretgenerator.mittwald.de_sshkeypairs_crd.yaml
+  - ./secretgenerator.mittwald.de_stringsecrets_crd.yaml
