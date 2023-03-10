@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kubernetes-secret-generator
+  name: nfs-client
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   namespace: argocd
