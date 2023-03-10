@@ -8,10 +8,10 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: gaming
   project: default
   source:
-    path: kustomize/skyrim-together/overlays/main
+    path: charts/skyrim-together/
     repoURL: https://github.com/heywoodlh/nixos-k8s-cluster
     targetRevision: {{ .Values.version }}
     directory:
