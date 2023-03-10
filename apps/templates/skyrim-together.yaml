@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: skyrim-together
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: default
+  source:
+    path: kustomize/skyrim-together/overlays/main
+    repoURL: https://github.com/heywoodlh/nixos-k8s-cluster
+    targetRevision: {{ .Values.version }}
+    directory:
+      recurse: false
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
