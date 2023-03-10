@@ -1,0 +1,11 @@
+nfs:
+  server: 10.0.50.50
+  path: /media/disk2/k8s
+  mountOptions:
+  - rw
+  - bg
+  - hard
+  - rsize=1048576
+  - wsize=1048576
+  - tcp
+  - timeo=600
